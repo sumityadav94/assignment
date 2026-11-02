@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Assignment</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* 5.4 CSS Variables */
+        :root {
+            --primary: #2563eb;
+            --background: #f1f5f9;
+            --text: #1e293b;
+            --spacing: 20px;
+        }
+
+        /* 5.2 Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 5.2 Element Selector */
+        h1 {
+            color: var(--primary);
+            font-size: 32px;
+            line-height: 1.5;
+        }
+
+        /* 5.2 Class Selector */
+        .card {
+            background-color: white;
+            padding: var(--spacing);
+            margin: var(--spacing);
+            border-radius: 10px;
+        }
+
+        /* 5.2 ID Selector */
+        #hero {
+            background-color: var(--background);
+            color: var(--text);
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* 5.3 Font and Line Height */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="hero">
+        <h1>Welcome to My Website</h1>
+        <p>This is my CSS styling assignment.</p>
+    </section>
+
+    <div class="card">
+        <h2>About CSS</h2>
+        <p>CSS is used to style HTML elements with colours, fonts, spacing and layouts.</p>
+    </div>
+
+</body>
+</html>
+
