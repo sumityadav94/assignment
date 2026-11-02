@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Cards</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Variables */
+:root {
+    --blue: #2563eb;
+    --pink: #db2777;
+    --bg: #f1f5f9;
+    --space: 20px;
+}
+
+/* Universal Selector & Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Element Selector */
+h1 {
+    font-size: 28px;
+    color: white;
+}
+
+/* Sticky Navbar */
+#hero {
+    background: var(--blue);
+    text-align: center;
+    padding: var(--space);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Profile Card */
+.card {
+    width: 280px;
+    margin: 25px auto;
+    padding: var(--space);
+    background: white;
+    border: 2px solid var(--blue);
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Circle Avatar */
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+/* Scrollable Bio */
+.bio {
+    height: 90px;
+    overflow: auto;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Second Colour Card */
+.pink {
+    border-color: var(--pink);
+}
+.pink .avatar {
+    background: var(--pink);
+}
+.pink h2 {
+    color: var(--pink);
+}
+
+/* Fixed Button */
+.add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    font-size: 28px;
+}
+</style>
+</head>
+
+<body>
+
+<header id="hero">
+    <h1>My Profile Cards</h1>
+</header>
+
+<div class="card">
+    <div class="avatar">A</div>
+    <h2>Atul Kumar</h2>
+    <p>B.Tech Student</p>
+    <div class="bio">
+        I am learning HTML, CSS and Java.
+        I enjoy web development and creating
+        new projects. My goal is to become
+        a skilled software developer.
+    </div>
+</div>
+
+<div class="card pink">
+    <div class="avatar">S</div>
+    <h2>Sumit Yadav</h2>
+    <p>Web Developer</p>
+    <div class="bio">
+        I am learning web development and
+        designing attractive websites.
+        I enjoy exploring new technologies
+        and building creative projects.
+    </div>
+</div>
+
+<button class="add">+</button>
+
+</body>
+</html>
+
