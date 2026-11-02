@@ -1,1 +1,161 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Assignment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #2563eb;
+    --bg: #f1f5f9;
+    --space: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: #1e293b;
+}
+
+/* 8.1 Grid Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+    gap: var(--space);
+    padding: var(--space);
+}
+
+/* Grid Areas */
+.head {
+    grid-area: head;
+    background: var(--blue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.side {
+    grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
+.foot {
+    grid-area: foot;
+    background: #1e293b;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* 8.2 Responsive Boxes */
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space);
+}
+
+/* 8.4 Flexbox Inside Boxes */
+.box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Header -->
+    <header class="head">
+        <h1>My Grid Website</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="side">
+        <div class="boxes">
+            <div class="box">
+                <span class="icon">🏠</span>
+                <span>Home</span>
+            </div>
+
+            <div class="box">
+                <span class="icon">👤</span>
+                <span>About</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="boxes">
+            <div class="box">
+                <span class="icon">🌐</span>
+                <span>HTML</span>
+            </div>
+
+            <div class="box">
+                <span class="icon">🎨</span>
+                <span>CSS</span>
+            </div>
+
+            <div class="box">
+                <span class="icon">⚡</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="box">
+                <span class="icon">💻</span>
+                <span>Web Design</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="foot">
+        <p>© 2026 My Grid Website</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
