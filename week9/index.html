@@ -1,1 +1,117 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Website</title>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background: #f1f5f9;
+    line-height: 1.6;
+}
+
+/* Mobile First Navbar */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #2563eb;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 { font-size: 1.8rem; }
+
+/* Tablet */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 { font-size: 2.2rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h1 { font-size: 2.5rem; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2 style="color:white">MyWebsite</h2>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h1>Welcome</h1>
+        <p>My Responsive Website</p>
+        <img src="https://picsum.photos/400/200" alt="Nature scenery">
+    </div>
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Creates website structure.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Styles and designs websites.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Adds interactive features.</p>
+    </div>
+</main>
+
+</body>
+</html>
+
